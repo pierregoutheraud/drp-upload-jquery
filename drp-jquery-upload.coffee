@@ -2,7 +2,7 @@
 
   $.fn.drpUpload = (params) ->
 
-    $input = $(this)
+    $input = $(@)
 
     submit = (e) ->
       files = $input[0].files or e.target.files or (e.dataTransfer and e.dataTransfer.files)
@@ -65,5 +65,12 @@
       processFiles( params.files )
     else
       $(this).on 'change', submit
+
+  # This freezes the brower because of $(@)
+  # $.drpUpload = $.fn.drpUpload
+
+  $.drpUpload = (params) ->
+    $('body').drpUpload(params)
+
 
 ) jQuery

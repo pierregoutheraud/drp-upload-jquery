@@ -71,7 +71,7 @@
           }
         });
 
-        // Exemple 2 avec boutton submit
+        // Exemple 2 with submit button
         $('#inputUpload2').drpUpload({
           submit: $('#submitUpload2'),
           success: function(data) {
@@ -83,7 +83,7 @@
         var $input = $('#inputUpload3');
         $('#submitUpload3').click(function(){
           var files = $input[0].files;
-          $('#submitUpload3').drpUpload({
+          $.drpUpload({
             files: files,
             progress: function(percentage) {
               console.log(percentage);

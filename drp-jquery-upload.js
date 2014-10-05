@@ -1,5 +1,5 @@
 (function($) {
-  return $.fn.drpUpload = function(params) {
+  $.fn.drpUpload = function(params) {
     var $input, handleUploadProgress, processFiles, submit, upload;
     $input = $(this);
     submit = function(e) {
@@ -68,5 +68,8 @@
     } else {
       return $(this).on('change', submit);
     }
+  };
+  return $.drpUpload = function(params) {
+    return $('body').drpUpload(params);
   };
 })(jQuery);
