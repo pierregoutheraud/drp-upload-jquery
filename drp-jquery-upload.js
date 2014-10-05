@@ -61,8 +61,10 @@
         params.progress(percentage);
       }
     };
-    if (params.submit) {
+    if (params.submit != null) {
       return params.submit.on('click', submit);
+    } else if (params.files != null) {
+      return processFiles(params.files);
     } else {
       return $(this).on('change', submit);
     }

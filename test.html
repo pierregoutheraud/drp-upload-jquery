@@ -45,31 +45,57 @@
       <div class="example">
         <h2>Example 2</h2>
         <input id="inputUpload2" multiple="multiple" type="file" accept="image/*" name="name" />
-        <input id="submitUpload" type="submit"/>
+        <input id="submitUpload2" type="submit"/>
+      </div>
+
+      <div class="example">
+        <h2>Example 3</h2>
+        <input id="inputUpload3" multiple="multiple" type="file" accept="image/*" name="name" />
+        <input id="submitUpload3" type="submit"/>
       </div>
 
       <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
       <script src="drp-jquery-upload.js"></script>
       <script>
 
-      // Exemple 1
-      $('#inputUpload').drpUpload({
-        progress: function(percentage) {
-          $('#inputUpload-progress').text(percentage);
-          console.log(percentage);
-        },
-        success: function(data) {
-          console.log(data);
-        }
+      $(function() {
+
+        // Exemple 1
+        $('#inputUpload').drpUpload({
+          progress: function(percentage) {
+            $('#inputUpload-progress').text(percentage);
+            console.log(percentage);
+          },
+          success: function(data) {
+            console.log(data);
+          }
+        });
+
+        // Exemple 2 avec boutton submit
+        $('#inputUpload2').drpUpload({
+          submit: $('#submitUpload2'),
+          success: function(data) {
+            console.log(data);
+          }
+        });
+
+        // Exemple 3 with files
+        var $input = $('#inputUpload3');
+        $('#submitUpload3').click(function(){
+          var files = $input[0].files;
+          $('#submitUpload3').drpUpload({
+            files: files,
+            progress: function(percentage) {
+              console.log(percentage);
+            },
+            success: function(data) {
+              console.log(data);
+            }
+          });
+        });
+
       });
 
-      // Exemple 2 avec boutton submit
-      $('#inputUpload2').drpUpload({
-        submit: $('#submitUpload'),
-        success: function(data) {
-          console.log(data);
-        }
-      });
 
       </script>
 

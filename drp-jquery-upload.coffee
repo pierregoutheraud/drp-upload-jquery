@@ -59,8 +59,10 @@
         params.progress( percentage )
       return
 
-    if params.submit
+    if params.submit?
       params.submit.on 'click', submit
+    else if params.files?
+      processFiles( params.files )
     else
       $(this).on 'change', submit
 
