@@ -2,7 +2,7 @@ jQuery upload plugin by drp.io
 ==============================
 
 ## Usage
-```javascript
+```html
 <script src="drp-jquery-upload.js"></script>
 ```
 
