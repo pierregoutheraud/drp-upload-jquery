@@ -1,0 +1,26 @@
+{
+  "name": "drp-upload-jquery",
+  "version": "1.0.0",
+  "homepage": "https://github.com/pierregoutheraud/drp-upload-jquery",
+  "authors": [
+    "Pierre Goutheraud"
+  ],
+  "description": "jQuery plugin for drp.io",
+  "main": [
+    "drp-jquery-upload.coffee",
+    "drp-jquery-upload.js"
+  ],
+  "keywords": [
+    "drp.io",
+    "upload"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/bower_components",
+    "test",
+    "tests"
+  ]
+}
