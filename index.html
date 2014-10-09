@@ -1,0 +1,104 @@
+<!doctype html>
+<!--[if lt IE 8 ]><html lang="en" class="is_ie7 lt_ie8 lt_ie9 lt_ie10 lt_ie11"><![endif]-->
+<!--[if IE 8 ]><html lang="en" class="is_ie8 lt_ie9 lt_ie10 lt_ie11"><![endif]-->
+<!--[if IE 9 ]><html lang="en" class="is_ie9 lt_ie10 lt_ie11"><![endif]-->
+<!--[if IE 10]><html lang="en" class="is_ie10 lt_ie11"><![endif]-->
+<!--[if IE 11]><html lang="en" class="is_ie11"><![endif]-->
+<!--[if !IE]><!--><html lang="en" class="not_ie"><!--<![endif]-->
+
+    <head>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0,  maximum-scale=1, user-scalable=0"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
+        <title>drp.io - jquery plugin</title>
+
+        <link rel="shortcut icon" type="image/png" href="/images/favicon.png" />
+
+        <!-- FIX IE HTML5 -->
+        <script type="text/javascript" >
+        "'article aside footer header nav section time'".replace(/\w+/g,function(n){document.createElement(n)})
+        </script>
+
+        <style>
+
+          .example {
+            margin-bottom: 20px;
+          }
+          .example h2 {
+            font-size: 30px;
+          }
+
+        </style>
+
+    </head>
+
+    <body>
+
+      <div class="example example1">
+        <h2>Example 1</h2>
+        <input id="inputUpload" multiple="multiple" type="file" accept="image/*" name="name" />
+        <span id="inputUpload-progress"></span>
+      </div>
+
+      <div class="example">
+        <h2>Example 2</h2>
+        <input id="inputUpload2" multiple="multiple" type="file" accept="image/*" name="name" />
+        <input id="submitUpload2" type="submit"/>
+      </div>
+
+      <div class="example">
+        <h2>Example 3</h2>
+        <input id="inputUpload3" multiple="multiple" type="file" accept="image/*" name="name" />
+        <input id="submitUpload3" type="submit"/>
+      </div>
+
+      <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+      <script src="drp-jquery-upload.js"></script>
+      <script>
+
+      $(function() {
+
+        // Exemple 1
+        $('#inputUpload').drpUpload({
+          progress: function(percentage) {
+            $('#inputUpload-progress').text(percentage);
+            console.log(percentage);
+          },
+          success: function(data) {
+            console.log(data);
+          }
+        });
+
+        // Exemple 2 with submit button
+        $('#inputUpload2').drpUpload({
+          submit: $('#submitUpload2'),
+          success: function(data) {
+            console.log(data);
+          }
+        });
+
+        // Exemple 3 with files
+        var $input = $('#inputUpload3');
+        $('#submitUpload3').click(function(){
+          var files = $input[0].files;
+          $.drpUpload({
+            files: files,
+            progress: function(percentage) {
+              console.log(percentage);
+            },
+            success: function(data) {
+              console.log(data);
+            }
+          });
+        });
+
+      });
+
+
+      </script>
+
+    </body>
+
+</html>
