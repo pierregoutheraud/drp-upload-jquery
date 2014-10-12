@@ -1,6 +1,9 @@
 jQuery upload plugin by drp.io
 ==============================
 
+This plugin allows you to **upload and store any type of files** to http://drp.io and retrieve informations to use them.
+It does not require any authentication.
+
 ## Usage
 ```html
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
@@ -15,10 +18,10 @@ The optional selector $('#input') is an upload input.
 | ----------|:----------|
 | progress      | A function to show upload progress. The function gets passed the percentage of the upload.
 | success       | A function to be called if the request succeeds. The function gets passed the information about the image/images uploaded.
-| submit       | Submit button which trigger files upload (jquery element)
-| files       | Input files to upload **All type of files ! Not only images**
+| submit       | Submit button which trigger files upload (jquery element).
+| files       | Input files to upload.
 
-### Example 1 : basic parameters
+### Example 1 with basic parameters
 ```html
 <input id="inputUpload" multiple="multiple" type="file" name="name" />
 ```
