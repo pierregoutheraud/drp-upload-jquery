@@ -5,14 +5,15 @@
   "authors": [
     "Pierre Goutheraud"
   ],
-  "description": "jQuery plugin for drp.io",
+  "description": "jQuery files upload plugin by http://drp.io",
   "main": [
-    "drp-jquery-upload.coffee",
-    "drp-jquery-upload.js"
+    "drp-upload-jquery.coffee",
+    "drp-upload-jquery.js"
   ],
   "keywords": [
     "drp.io",
-    "upload"
+    "upload files"
+    "upload jquery plugin"
   ],
   "license": "MIT",
   "ignore": [
