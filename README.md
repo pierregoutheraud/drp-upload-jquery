@@ -16,11 +16,11 @@ The optional selector $('#input') is an upload input.
 | progress      | A function to show upload progress. The function gets passed the percentage of the upload.
 | success       | A function to be called if the request succeeds. The function gets passed the information about the image/images uploaded.
 | submit       | Submit button which trigger files upload (jquery element)
-| files       | Input files to upload
+| files       | Input files to upload **All type of files ! Not only images**
 
 ### Example 1 : basic parameters
 ```html
-<input id="inputUpload" multiple="multiple" type="file" accept="image/*" name="name" />
+<input id="inputUpload" multiple="multiple" type="file" name="name" />
 ```
 ```javascript
 $('#input').drpUpload({
@@ -34,7 +34,7 @@ $('#input').drpUpload({
 ```
 ### Exemple 2 with submit button as parameter
 ```html
-<input id="inputUpload2" multiple="multiple" type="file" accept="image/*" name="name" />
+<input id="inputUpload2" multiple="multiple" type="file" name="name" />
 <input id="submitUpload2" type="submit"/>
 ```
 ```javascript
@@ -47,7 +47,7 @@ $('#inputUpload2').drpUpload({
 ```
 ### Exemple 3 with files parameters
 ```html
-<input id="inputUpload3" multiple="multiple" type="file" accept="image/*" name="name" />
+<input id="inputUpload3" multiple="multiple" type="file" name="name" />
 ```
 ```javascript
 var files = $input[0].files;
