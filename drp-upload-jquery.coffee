@@ -1,6 +1,6 @@
 (($) ->
 
-  $.fn.drpUpload = (params) ->
+  $.fn.upload = (params) ->
 
     $input = $(@)
 
@@ -66,11 +66,11 @@
     else
       $(this).on 'change', submit
 
-  # This freezes the brower because of $(@)
-  # $.drpUpload = $.fn.drpUpload
+  # This freezes the browser because of $(@)
+  # $.upload = $.fn.upload
 
-  $.drpUpload = (params) ->
-    $('body').drpUpload(params)
+  $.upload = (params) ->
+    $('body').upload(params)
 
 
 ) jQuery

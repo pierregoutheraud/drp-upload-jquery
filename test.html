@@ -61,7 +61,7 @@
       $(function() {
 
         // Exemple 1
-        $('#inputUpload').drpUpload({
+        $('#inputUpload').upload({
           progress: function(percentage) {
             $('#inputUpload-progress').text(percentage);
             console.log(percentage);
@@ -72,7 +72,7 @@
         });
 
         // Exemple 2 with submit button
-        $('#inputUpload2').drpUpload({
+        $('#inputUpload2').upload({
           submit: $('#submitUpload2'),
           success: function(data) {
             console.log(data);
@@ -83,7 +83,7 @@
         var $input = $('#inputUpload3');
         $('#submitUpload3').click(function(){
           var files = $input[0].files;
-          $.drpUpload({
+          $.upload({
             files: files,
             progress: function(percentage) {
               console.log(percentage);
