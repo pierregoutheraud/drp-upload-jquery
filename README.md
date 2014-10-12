@@ -20,9 +20,7 @@ The optional selector $('#input') is an upload input.
 
 ### Example 1 : basic parameters
 ```html
-<div class="example example1">
-  <input id="inputUpload" multiple="multiple" type="file" accept="image/*" name="name" />
-</div>
+<input id="inputUpload" multiple="multiple" type="file" accept="image/*" name="name" />
 ```
 ```javascript
 $('#input').drpUpload({
@@ -36,10 +34,8 @@ $('#input').drpUpload({
 ```
 ### Exemple 2 with submit button as parameter
 ```html
-<div class="example">
-  <input id="inputUpload2" multiple="multiple" type="file" accept="image/*" name="name" />
-  <input id="submitUpload2" type="submit"/>
-</div>
+<input id="inputUpload2" multiple="multiple" type="file" accept="image/*" name="name" />
+<input id="submitUpload2" type="submit"/>
 ```
 ```javascript
 $('#inputUpload2').drpUpload({
@@ -51,9 +47,7 @@ $('#inputUpload2').drpUpload({
 ```
 ### Exemple 3 with files parameters
 ```html
-<div class="example">
-  <input id="inputUpload3" multiple="multiple" type="file" accept="image/*" name="name" />
-</div>
+<input id="inputUpload3" multiple="multiple" type="file" accept="image/*" name="name" />
 ```
 ```javascript
 var files = $input[0].files;
